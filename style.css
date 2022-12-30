@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  /* -- Primary */
+  --clr-primary-300: hsl(30, 38%, 92%);
+  --clr-primary-600: hsl(158, 36%, 37%);
+  /* -- Neutral */
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-700: hsl(212, 21%, 14%);
+
+  /* Typography */
+  /* -- Font size */
+  --fs-p: 14px;
+  --fw-light: 300;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+  /* -- Fonts */
+  --ff-content: "Montserrat", sans-serif;
+  --ff-title: "Fraunces", serif;
+}
+
+body {
+  background-color: var(--clr-primary-300);
+}
+
+.product-card {
+  margin: auto;
+  width: 350px;
+  border-radius: 10px;
+  background-color: var(--clr-neutral-100);
+}
+
+.product-card__picture__image {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card__content {
+  padding: 1.7rem;
+  font-family: var(--ff-content);
+}
+
+.product-card__content__product-type {
+  font-weight: var(--fw-light);
+  color: var(--clr-neutral-400);
+  text-transform: uppercase;
+  font-size: var(--fs-p);
+  letter-spacing: 0.2rem;
+}
+
+.product-card__content__product-title {
+  font-family: var(--ff-title);
+}
+
+.product-card__content__description {
+  font-size: var(--fs-p);
+  color: var(--clr-neutral-400);
+}
+
+.product-card__content__price {
+  display: flex;
+  align-items: center;
+}
+.product-card__content__price__current {
+  font-family: var(--ff-title);
+  color: var(--clr-primary-600);
+  font-size: 1.8rem;
+  margin: 0 0.95rem 0 0;
+}
+
+.product-card__content__price__before {
+  margin: 0;
+  text-decoration: line-through;
+}
+
+.product-card__content__add-cart-button {
+  background-color: var(--clr-primary-600);
+  margin-top: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.product-card__content__add-cart-button img {
+  width: 15px;
+  height: 16px;
+}
+
+.product-card__content__add-cart-button p {
+  color: var(--clr-primary-300);
+}
+
+@media screen and (min-width: 1440px) {
+  .product-card {
+    width: 740px;
+    display: flex;
+  }
+
+  .product-card__picture {
+    max-width: 100%;
+    width: 400px;
+    display: block;
+    margin: 0;
+    height: auto;
+  }
+  .product-card__picture__image {
+    border-radius: 0;
+  }
+
+  .product-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
